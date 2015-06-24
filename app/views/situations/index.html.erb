@@ -5,11 +5,11 @@
 <table>
   <thead>
     <tr>
+      <th>Sit rep</th>
       <th>Choice 1</th>
       <th>Choice 1 label</th>
       <th>Choice 2</th>
       <th>Choice 2 label</th>
-      <th>Sit rep</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +17,11 @@
   <tbody>
     <% @situations.each do |situation| %>
       <tr>
+        <td><%= situation.sit_rep %></td>
         <td><%= situation.choice_1 %></td>
         <td><%= situation.choice_1_label %></td>
         <td><%= situation.choice_2 %></td>
         <td><%= situation.choice_2_label %></td>
-        <td><%= situation.sit_rep %></td>
         <td><%= link_to 'Show', situation %></td>
         <td><%= link_to 'Edit', edit_situation_path(situation) %></td>
         <td><%= link_to 'Destroy', situation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
