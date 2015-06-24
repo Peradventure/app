@@ -11,4 +11,5 @@ Peradventure is an open source Rails project which encourages contribution. The 
 git clone git@github.com:Peradventure/app.git
 cd app
 bundle install
+rake db:migrate
 ```
