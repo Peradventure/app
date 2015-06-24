@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Choice 1:</strong>
+  <%= @situation.choice_1 %>
+</p>
+
+<p>
+  <strong>Choice 1 label:</strong>
+  <%= @situation.choice_1_label %>
+</p>
+
+<p>
+  <strong>Choice 2:</strong>
+  <%= @situation.choice_2 %>
+</p>
+
+<p>
+  <strong>Choice 2 label:</strong>
+  <%= @situation.choice_2_label %>
+</p>
+
+<p>
+  <strong>Sit rep:</strong>
+  <%= @situation.sit_rep %>
+</p>
+
+<%= link_to 'Edit', edit_situation_path(@situation) %> |
+<%= link_to 'Back', situations_path %>

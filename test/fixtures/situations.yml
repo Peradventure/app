@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  choice_1: 1
+  choice_1_label: MyString
+  choice_2: 1
+  choice_2_label: MyString
+  sit_rep: MyText
+
+two:
+  choice_1: 1
+  choice_1_label: MyString
+  choice_2: 1
+  choice_2_label: MyString
+  sit_rep: MyText
