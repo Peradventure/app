@@ -7,6 +7,8 @@ Peradventure is a "Choose Your Own Adventure" game that allows players to explor
 
 Peradventure is an open source Rails project which encourages contribution. The following commands will get your development environment set up (provided you have Ruby, Rails, and Bundle installed already).
 
-  git clone git@github.com:Peradventure/app.git
-  cd app
-  bundle install
+```
+git clone git@github.com:Peradventure/app.git
+cd app
+bundle install
+```
