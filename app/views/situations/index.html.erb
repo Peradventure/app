@@ -17,11 +17,11 @@
   <tbody>
     <% @situations.each do |situation| %>
       <tr>
-        <td><%= situation.sit_rep %></td>
+        <td><%= situation.sit_rep.truncate(25) %></td>
         <td><%= situation.choice_1 %></td>
-        <td><%= situation.choice_1_label %></td>
+        <td><%= situation.choice_1_label.truncate(25) %></td>
         <td><%= situation.choice_2 %></td>
-        <td><%= situation.choice_2_label %></td>
+        <td><%= situation.choice_2_label.truncate(25) %></td>
         <td><%= link_to 'Show', situation %></td>
         <td><%= link_to 'Edit', edit_situation_path(situation) %></td>
         <td><%= link_to 'Destroy', situation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
