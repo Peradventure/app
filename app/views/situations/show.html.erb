@@ -1,28 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Sit rep:</strong>
   <%= @situation.sit_rep %>
 </p>
+
+<a href="./<%= @situation.choice_1 %>" class="button" id="choice1">
+  <%= @situation.choice_1_label %>
+</a>
 
 <p>
   <strong>Choice 1:</strong>
   <%= @situation.choice_1 %>
 </p>
 
-<p>
-  <strong>Choice 1 label:</strong>
-  <%= @situation.choice_1_label %>
-</p>
+
+<a href="./<%= @situation.choice_2 %>" class="button" id="choice2">
+  <%= @situation.choice_2_label %>
+</a>
 
 <p>
   <strong>Choice 2:</strong>
   <%= @situation.choice_2 %>
-</p>
-
-<p>
-  <strong>Choice 2 label:</strong>
-  <%= @situation.choice_2_label %>
 </p>
 
 <%= link_to 'Edit', edit_situation_path(@situation) %> |
