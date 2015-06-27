@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Sit rep</th>
       <th>Choice 1</th>
       <th>Choice 1 label</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @situations.each do |situation| %>
       <tr>
+        <td><%= situation.title %></td>
         <td><%= situation.sit_rep.truncate(25) %></td>
         <td><%= situation.choice_1 %></td>
         <td><%= situation.choice_1_label.truncate(25) %></td>
