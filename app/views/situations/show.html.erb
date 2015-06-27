@@ -6,6 +6,14 @@
   </p>
 </div>
 
+<h1>
+  <strong><%= @situation.title %></strong>
+</h1>
+
+<p>
+  <%= @situation.sit_rep %>
+</p>
+
 <div class="row">
   <a href="./<%= @situation.choice_1 %>" class="button" id="choice1">
     <%= @situation.choice_1_label %>

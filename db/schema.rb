@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150624035053) do
+ActiveRecord::Schema.define(version: 20150627175115) do
 
   create_table "situations", force: :cascade do |t|
     t.integer  "choice_1"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20150624035053) do
     t.text     "sit_rep"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "title"
+    t.boolean  "ending"
   end
 
 end
