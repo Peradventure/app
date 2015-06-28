@@ -28,6 +28,7 @@ class SituationsController < ApplicationController
   # POST /situations.json
   def create
     @situation = Situation.new(situation_params)
+    @situations = Situation.all
 
     respond_to do |format|
       if @situation.save
