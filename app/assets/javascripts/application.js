@@ -17,15 +17,3 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
-
-$(document).ready(function(){
-  $('#situation_ending').change(function() {
-      console.log('changed ending option')
-      if( this.checked) {
-          $("#choices").hide()
-      } else {
-          $("#choices").show();
-      }
-  });
-  $('#situation_ending').trigger('change');
-});
