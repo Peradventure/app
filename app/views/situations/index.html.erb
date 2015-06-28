@@ -23,9 +23,9 @@
           <td><%= situation.title %></td>
           <td><%= situation.sit_rep.truncate(25) %></td>
           <td><%= situation.choice_1 %></td>
-          <td><%= situation.choice_1_label.truncate(25) rescue "" %></td>
+          <td><%= situation.choice_1_label %></td>
           <td><%= situation.choice_2 %></td>
-          <td><%= situation.choice_2_label.truncate(25) rescue "" %></td>
+          <td><%= situation.choice_2_label %></td>
           <td><%= p "X" if situation.ending? %></td>
           <td><%= link_to 'Show', situation %></td>
           <td><%= link_to 'Edit', edit_situation_path(situation) %></td>
