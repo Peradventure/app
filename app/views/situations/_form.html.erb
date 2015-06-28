@@ -22,36 +22,38 @@
   </div>
 
   <div class="field">
-    <%= f.label :choice_1 %><br>
-    <select name="situation[choice_1]">
-      <% @situations.each do |situation| %>
-        <option value="<%= situation.id %>"<% if @situation.choice_1 == situation.id %> SELECTED<% end %>><%= situation.id %></option>
-      <% end %>
-    </select>
-  </div>
-
-  <div class="field">
-    <%= f.label :choice_1_label %><br>
-    <%= f.text_field :choice_1_label %>
-  </div>
-
-  <div class="field">
-    <%= f.label :choice_2 %><br>
-    <select name="situation[choice_2]">
-      <% @situations.each do |situation| %>
-        <option value="<%= situation.id %>"<% if @situation.choice_2 == situation.id %> SELECTED<% end %>><%= situation.id %></option>
-      <% end %>
-    </select>
-  </div>
-
-  <div class="field">
-    <%= f.label :choice_2_label %><br>
-    <%= f.text_field :choice_2_label %>
-  </div>
-
-  <div class="field">
-    <%= f.label :ending %><br>
+    <label for='situation_ending'>Check if this is the end of a story</label><br>
     <%= f.check_box :ending %>
+  </div>
+
+  <div id="choices">
+    <div class="field">
+        <%= f.label :choice_1 %><br>
+        <select name="situation[choice_1]">
+          <% @situations.each do |situation| %>
+            <option value="<%= situation.id %>"<% if @situation.choice_1 == situation.id %> SELECTED<% end %>><%= situation.id %></option>
+          <% end %>
+        </select>
+    </div>
+
+    <div class="field">
+      <%= f.label :choice_1_label %><br>
+      <%= f.text_field :choice_1_label %>
+    </div>
+
+    <div class="field">
+      <%= f.label :choice_2 %><br>
+      <select name="situation[choice_2]">
+        <% @situations.each do |situation| %>
+          <option value="<%= situation.id %>"<% if @situation.choice_2 == situation.id %> SELECTED<% end %>><%= situation.id %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="field">
+      <%= f.label :choice_2_label %><br>
+      <%= f.text_field :choice_2_label %>
+    </div>
   </div>
 
   <div class="actions">

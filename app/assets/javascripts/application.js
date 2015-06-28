@@ -17,3 +17,13 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready(function(){
+  $('#situation_ending').click(function() {
+      if( $(this).is(':checked')) {
+          $("#choices").hide();
+      } else {
+          $("#choices").show();
+      }
+  });
+});
