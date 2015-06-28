@@ -26,7 +26,7 @@
     <%= f.check_box :ending %>
   </div>
 
-  <div id="choices">
+  <div id="choices" style="<% if @situation.ending %>display:none;<% end %>">
     <div class="field">
         <%= f.label :choice_1 %><br>
         <select name="situation[choice_1]">

@@ -19,11 +19,13 @@
 $(function(){ $(document).foundation(); });
 
 $(document).ready(function(){
-  $('#situation_ending').click(function() {
-      if( $(this).is(':checked')) {
-          $("#choices").hide();
+  $('#situation_ending').change(function() {
+      console.log('changed ending option')
+      if( this.checked) {
+          $("#choices").hide()
       } else {
           $("#choices").show();
       }
   });
+  $('#situation_ending').trigger('change');
 });
