@@ -10,15 +10,18 @@ class SituationsController < ApplicationController
   # GET /situations/1
   # GET /situations/1.json
   def show
+    @last_situation = @situation.id
   end
 
   # GET /situations/new
   def new
+    @situations = Situation.all
     @situation = Situation.new
   end
 
   # GET /situations/1/edit
   def edit
+    @situations = Situation.all
   end
 
   # POST /situations
@@ -40,6 +43,7 @@ class SituationsController < ApplicationController
   # PATCH/PUT /situations/1
   # PATCH/PUT /situations/1.json
   def update
+    @situations = Situation.all
     respond_to do |format|
       if @situation.update(situation_params)
         format.html { redirect_to @situation, notice: 'Situation was successfully updated.' }
