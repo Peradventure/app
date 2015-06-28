@@ -30,6 +30,7 @@
     <div class="field">
         <%= f.label :choice_1 %><br>
         <select name="situation[choice_1]">
+          <option></option>
           <% @situations.each do |situation| %>
             <option value="<%= situation.id %>"<% if @situation.choice_1 == situation.id %> SELECTED<% end %>><%= situation.id %></option>
           <% end %>
@@ -44,6 +45,7 @@
     <div class="field">
       <%= f.label :choice_2 %><br>
       <select name="situation[choice_2]">
+        <option></option>
         <% @situations.each do |situation| %>
           <option value="<%= situation.id %>"<% if @situation.choice_2 == situation.id %> SELECTED<% end %>><%= situation.id %></option>
         <% end %>
