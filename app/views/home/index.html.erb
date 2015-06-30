@@ -1,0 +1,22 @@
+<% if notice %>
+  <p data-alert class="alert-box success radius"><%= notice %></p>
+<% end %>
+
+<div class="row text-center">
+  <h1><%= @situation.title %></h1>
+  <p>
+    <%= @situation.sit_rep %>
+  </p>
+</div>
+
+<% unless @situation.ending %>
+<div class="row text-center">
+  <a href="./<%= @choice_1 %>" class="button" id="choice1">
+    <%= @choice_1_label %>
+  </a>
+
+  <a href="./<%= @choice_2 %>" class="button" id="choice2">
+    <%= @choice_2_label %>
+  </a>
+</div>
+<% end %>
