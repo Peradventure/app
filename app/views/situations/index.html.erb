@@ -1,5 +1,7 @@
 <div class="row">
-  <p id="notice"><%= notice %></p>
+  <% if notice %>
+    <p data-alert class="alert-box success radius"><%= notice %></p>
+  <% end %>
 
   <h1>Listing Situations</h1>
 
