@@ -1,5 +1,7 @@
 <% @choice_1 = @situation.choice_1 ? @situation.choice_1 : "new?oid=#{@situation.id}" %>
 <% @choice_2 = @situation.choice_2 ? @situation.choice_2 : "new?oid=#{@situation.id}" %>
+<% @choice_1_label = @situation.choice_1 ? @situation.choice_1_label : "Create '#{@situation.choice_1_label}'" %>
+<% @choice_2_label = @situation.choice_2 ? @situation.choice_2_label : "Create '#{@situation.choice_2_label}'" %>
 
 <p id="notice"><%= notice %></p>
 
@@ -13,11 +15,11 @@
 <% unless @situation.ending %>
 <div class="row text-center">
   <a href="./<%= @choice_1 %>" class="button" id="choice1">
-    <%= @situation.choice_1_label %>
+    <%= @choice_1_label %>
   </a>
 
   <a href="./<%= @choice_2 %>" class="button" id="choice2">
-    <%= @situation.choice_2_label %>
+    <%= @choice_2_label %>
   </a>
 </div>
 <% end %>
