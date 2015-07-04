@@ -2,7 +2,12 @@
   <h1>New Situation</h1>
 
   <% if params[:oid] && params[:obutton] %>
-    <h5>You hit a choice that has not been created yet, now you control the story...</h5>
+    <div data-alert class="alert-box secondary radius">
+      You hit a choice that has not been created yet, now you control the story...
+    </div>
+    <div data-alert class="alert-box alert radius">
+      The situation that you create here will be the option that takes the place of the button you clicked on!
+    </div>
   <% end %>
 
   <%= render 'form' %>
