@@ -1,6 +1,7 @@
 class SituationsController < ApplicationController
   before_action :set_situation, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, except: [:create, :new]
+  before_action :authenticate_user!
 
   # GET /situations
   # GET /situations.json
