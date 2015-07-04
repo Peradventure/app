@@ -1,6 +1,6 @@
 class SituationsController < ApplicationController
   before_action :set_situation, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_admin!, except: [:create, :new]
 
   # GET /situations
   # GET /situations.json
@@ -36,10 +36,9 @@ class SituationsController < ApplicationController
 
     respond_to do |format|
       if @situation.save
-        format.html { redirect_to @situation, notice: 'Situation was successfully created.' }
+        format.html { redirect_to '/'+@situation.id.to_s, notice: 'Situation was successfully created.' }
         format.json { render :show, status: :created, location: @situation }
         set_parent_choice(params[:oid], params[:obutton], @situation.id)
-
       else
         format.html { render :new }
         format.json { render json: @situation.errors, status: :unprocessable_entity }
@@ -104,10 +103,9 @@ class SituationsController < ApplicationController
 
     def authenticate_admin!
       # check if current user is admin
-      unless current_user.admin
+      unless current_user.admin?
         # if current_user is not admin redirect to some route
-        redirect_to 'home#index'
+        redirect_to '/'
       end
-      # if current_user is admin he will proceed to edit action
     end
 end

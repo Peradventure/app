@@ -5,14 +5,20 @@
   </p>
 </div>
 
-<% unless @situation.ending %>
 <div class="row text-center">
-  <a href="./<%= @choice_1 %>" class="button" id="choice1">
-    <%= @choice_1_label %>
-  </a>
+  <% unless @situation.ending %>
+    <a href="./<%= @choice_1 %>" class="button" id="choice1">
+      <%= @choice_1_label %>
+    </a>
 
-  <a href="./<%= @choice_2 %>" class="button" id="choice2">
-    <%= @choice_2_label %>
-  </a>
+    <a href="./<%= @choice_2 %>" class="button" id="choice2">
+      <%= @choice_2_label %>
+    </a>
+  <% end %>
+
+  <% if @situation.ending %>
+    <a href="/1" class="button" id="startover">
+      Start Over
+    </a>
+  <% end %>
 </div>
-<% end %>
