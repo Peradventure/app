@@ -1,6 +1,10 @@
 <div class="row">
   <h1>New Situation</h1>
 
+  <% if params[:oid] && params[:obutton] %>
+    <h5>You hit a choice that has not been created yet, now you control the story...</h5>
+  <% end %>
+
   <%= render 'form' %>
 
   <%= link_to 'Situation List', situations_path %>
