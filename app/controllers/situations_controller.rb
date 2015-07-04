@@ -64,10 +64,18 @@ class SituationsController < ApplicationController
   # DELETE /situations/1
   # DELETE /situations/1.json
   def destroy
-    @situation.destroy
-    respond_to do |format|
-      format.html { redirect_to situations_url, notice: 'Situation was successfully destroyed.' }
-      format.json { head :no_content }
+    situations = Situation.all
+    unless situations.find_by(choice_1: @situation.id) or situations.find_by(choice_2: @situation.id)
+      @situation.destroy
+      respond_to do |format|
+        format.html { redirect_to situations_url, notice: 'Situation was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to situations_url, notice: 'Cannot delete situation when a link to it exists!' }
+        format.json { head :no_content }
+      end
     end
   end
 
