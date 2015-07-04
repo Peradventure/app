@@ -101,4 +101,13 @@ class SituationsController < ApplicationController
       end
       @parent.save
     end
+
+    def authenticate_admin!
+      # check if current user is admin
+      unless current_user.admin
+        # if current_user is not admin redirect to some route
+        redirect_to 'home#index'
+      end
+      # if current_user is admin he will proceed to edit action
+    end
 end
