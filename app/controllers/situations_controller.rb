@@ -10,9 +10,8 @@ class SituationsController < ApplicationController
   # GET /situations/1
   # GET /situations/1.json
   def show
-    @last_situation = @situation.id
-    @choice_1 = (@situation.choice_1 && @situation.choice_1 != 0) ? @situation.choice_1 : "new?oid=#{@situation.id}"
-    @choice_2 = (@situation.choice_2 && @situation.choice_2 != 0) ? @situation.choice_2 : "new?oid=#{@situation.id}"
+    @choice_1 = (@situation.choice_1 && @situation.choice_1 != 0) ? @situation.choice_1 : "new?oid=#{@situation.id}&obutton=1"
+    @choice_2 = (@situation.choice_2 && @situation.choice_2 != 0) ? @situation.choice_2 : "new?oid=#{@situation.id}&obutton=2"
     @choice_1_label = @situation.choice_1_label
     @choice_2_label = @situation.choice_2_label
   end
@@ -38,6 +37,8 @@ class SituationsController < ApplicationController
       if @situation.save
         format.html { redirect_to @situation, notice: 'Situation was successfully created.' }
         format.json { render :show, status: :created, location: @situation }
+        set_parent_choice(params[:oid], params[:obutton], @situation.id)
+
       else
         format.html { render :new }
         format.json { render json: @situation.errors, status: :unprocessable_entity }
@@ -79,5 +80,16 @@ class SituationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def situation_params
       params.require(:situation).permit(:title, :sit_rep, :choice_1, :choice_1_label, :choice_2, :choice_2_label, :ending)
+    end
+
+    #
+    def set_parent_choice(parent_id, choice_number, choice_id)
+      @parent = Situation.find(parent_id)
+      if choice_number == '1'
+        @parent.choice_1 = choice_id
+      elsif choice_number == '2'
+        @parent.choice_2 = choice_id
+      end
+      @parent.save
     end
 end
