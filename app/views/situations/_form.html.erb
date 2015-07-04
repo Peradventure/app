@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <% if params[:oid] && params[:obutton] %>
+    <input type="hidden" name="oid" value="<%= params[:oid] %>" />
+    <input type="hidden" name="obutton" value="<%= params[:obutton] %>" />
+  <% end %>
+
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
