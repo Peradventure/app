@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <nav class="top-bar" data-topbar role="navigation">
+    <nav class="top-bar" data-topbar role="navigation" data-topbar>
       <ul class="title-area">
         <li class="name">
           <h1><a href="#">Peradventure</a></h1>
@@ -36,14 +36,16 @@
     </nav>
 
     <div class="row">
-      <% if notice %>
-        <p data-alert class="alert-box info radius"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert-box alert radius"><%= alert %></p>
-      <% end %>
-
-      <%= yield %>
+      <div class="small-12 columns">
+        <br>
+        <% if notice %>
+          <div data-alert class="alert-box info radius secondary"><%= notice %></div>
+        <% end %>
+        <% if alert %>
+          <div data-alert class="alert-box alert radius secondary"><%= alert %></div>
+        <% end %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
