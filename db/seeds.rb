@@ -8,6 +8,5 @@
 
 Situation.create(id: '1', title: 'Death', sit_rep: 'You dieded.', choice_1: '2', choice_1_label: 'Go to Heaven', choice_2: '3', choice_2_label: 'Go to Hell')
 Situation.create(id: '2', title: 'You are in Heaven.', sit_rep: "I hope you like it because you can't leave.", ending: true)
-Situation.create(id: '3', title: 'You are in Hell.', sit_rep: "If you want to get to heaven click the button below that says 'Heaven'. Muahahahahahahhahaahhahahah!", ending: true)
-Situation.create(id: '42', title: 'Testing nil choices.', sit_rep: "Developers are nil and so am I.", ending: true)
-Situation.create(id: '43', title: 'Testing long choices.', sit_rep: "Developers are long and so am I.", ending: true, choice_1: '42', choice_1_label: 'This is a very long label for a choice and you shouldnt be able to do this and my grammer is dumb.')
+Situation.create(id: '3', title: 'You are in Hell.', sit_rep: "If you want to get to heaven fuck you.", choice_1: '4', choice_1_label: 'Go to Heaven', choice_2: '0', choice_2_label: 'Stay In Hell' )
+Situation.create(id: '4', title: 'You are in Heaven.', sit_rep: "Fuck You", ending: true)
