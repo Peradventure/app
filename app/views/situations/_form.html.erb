@@ -42,7 +42,7 @@
         <select name="situation[choice_1]">
           <option value="" disabled selected>Select your next situation</option>
           <% @situations.each do |situation| %>
-            <option value="<%= situation.id %>"<% if @situation.choice_1 == situation.id %> SELECTED<% end %>><%= situation.id %></option>
+            <option value="<%= situation.id %>"<% if @situation.choice_1 == situation.id %> SELECTED<% end %>><%= situation.id %> - <%= situation.title %></option>
           <% end %>
           <option value="0">New Situation</option>
         </select>
@@ -58,7 +58,7 @@
       <select name="situation[choice_2]">
         <option value="0" disabled selected>Select your next situation</option>
         <% @situations.each do |situation| %>
-          <option value="<%= situation.id %>"<% if @situation.choice_2 == situation.id %> SELECTED<% end %>><%= situation.id %></option>
+          <option value="<%= situation.id %>"<% if @situation.choice_2 == situation.id %> SELECTED<% end %>><%= situation.id %> - <%= situation.title %></option>
         <% end %>
         <option value="0">New Situation</option>
       </select>
