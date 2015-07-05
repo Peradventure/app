@@ -31,12 +31,13 @@
     <%= f.check_box :ending %>
   </div>
 
-  <div class="field">
-    <%= f.label :choice_1_label %>
-    <%= f.text_field :choice_1_label %>
-  </div>
-
   <div id="choices" style="<% if @situation.ending %>display:none;<% end %>">
+
+    <div class="field">
+      <%= f.label :choice_1_label %>
+      <%= f.text_field :choice_1_label %>
+    </div>
+
     <div class="field">
         <%= f.label :choice_1 %>
         <select name="situation[choice_1]">
