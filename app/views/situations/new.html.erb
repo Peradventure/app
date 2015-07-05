@@ -3,7 +3,10 @@
 
   <% if params[:oid] && params[:obutton] %>
     <div data-alert class="alert-box secondary radius">
-      You hit a choice that has not been created yet, now you control the story...
+      You hit a choice that has not been created yet, now you control the story...OR you can
+    <a href="/situations/1" id="startover">
+      Start Over
+    </a>
     </div>
     <div data-alert class="alert-box alert radius">
       The situation that you create here will be the option that takes the place of the button you clicked on!
@@ -11,6 +14,7 @@
   <% end %>
 
   <%= render 'form' %>
-
-  <%= link_to 'Situation List', situations_path %>
+  <% if current_user.admin? %>
+    <%= link_to 'Situation List', situations_path %>
+  <% end %>
 </div>
