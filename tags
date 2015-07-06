@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddAdminToUsers	db/migrate/20150704100238_add_admin_to_users.rb	/^class AddAdminToUsers < ActiveRecord::Migration$/;"	c
+AddEndingToSituations	db/migrate/20150627175115_add_ending_to_situations.rb	/^class AddEndingToSituations < ActiveRecord::Migration$/;"	c
+AddTitleToSituations	db/migrate/20150627173311_add_title_to_situations.rb	/^class AddTitleToSituations < ActiveRecord::Migration$/;"	c
+AddUsernameToUsers	db/migrate/20150706021715_add_username_to_users.rb	/^class AddUsernameToUsers < ActiveRecord::Migration$/;"	c
+App	config/application.rb	/^module App$/;"	m
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:App
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CreateSituations	db/migrate/20150624035053_create_situations.rb	/^class CreateSituations < ActiveRecord::Migration$/;"	c
+DeviseCreateUsers	db/migrate/20150704015035_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+HomeController	app/controllers/home_controller.rb	/^class HomeController < ApplicationController$/;"	c
+Situation	app/models/situation.rb	/^class Situation < ActiveRecord::Base$/;"	c
+SituationTest	test/models/situation_test.rb	/^class SituationTest < ActiveSupport::TestCase$/;"	c
+SituationsController	app/controllers/situations_controller.rb	/^class SituationsController < ApplicationController$/;"	c
+SituationsControllerTest	test/controllers/situations_controller_test.rb	/^class SituationsControllerTest < ActionController::TestCase$/;"	c
+SituationsHelper	app/helpers/situations_helper.rb	/^module SituationsHelper$/;"	m
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+admin?	app/models/user.rb	/^  def admin?$/;"	f	class:User
+authenticate_admin!	app/controllers/situations_controller.rb	/^    def authenticate_admin!$/;"	f	class:SituationsController
+change	db/migrate/20150624035053_create_situations.rb	/^  def change$/;"	f	class:CreateSituations
+change	db/migrate/20150627173311_add_title_to_situations.rb	/^  def change$/;"	f	class:AddTitleToSituations
+change	db/migrate/20150627175115_add_ending_to_situations.rb	/^  def change$/;"	f	class:AddEndingToSituations
+change	db/migrate/20150704015035_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20150704100238_add_admin_to_users.rb	/^  def change$/;"	f	class:AddAdminToUsers
+change	db/migrate/20150706021715_add_username_to_users.rb	/^  def change$/;"	f	class:AddUsernameToUsers
+configure_permitted_parameters	app/controllers/application_controller.rb	/^  def configure_permitted_parameters$/;"	f	class:ApplicationController
+create	app/controllers/situations_controller.rb	/^  def create$/;"	f	class:SituationsController
+destroy	app/controllers/situations_controller.rb	/^  def destroy$/;"	f	class:SituationsController
+edit	app/controllers/situations_controller.rb	/^  def edit$/;"	f	class:SituationsController
+find_first_by_auth_conditions	app/models/user.rb	/^  def self.find_first_by_auth_conditions(warden_conditions)$/;"	F	class:User
+index	app/controllers/home_controller.rb	/^  def index$/;"	f	class:HomeController
+index	app/controllers/situations_controller.rb	/^  def index$/;"	f	class:SituationsController
+new	app/controllers/situations_controller.rb	/^  def new$/;"	f	class:SituationsController
+set_parent_choice	app/controllers/situations_controller.rb	/^    def set_parent_choice(parent_id, choice_number, choice_id)$/;"	f	class:SituationsController
+set_situation	app/controllers/situations_controller.rb	/^    def set_situation$/;"	f	class:SituationsController
+show	app/controllers/situations_controller.rb	/^  def show$/;"	f	class:SituationsController
+situation_params	app/controllers/situations_controller.rb	/^    def situation_params$/;"	f	class:SituationsController
+update	app/controllers/situations_controller.rb	/^  def update$/;"	f	class:SituationsController
