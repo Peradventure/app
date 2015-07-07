@@ -9,7 +9,7 @@ $( document ).on('page:load ready', function(){
       return false;
   });
   $('#situation_ending').trigger('change');
-});
+
 
 $(function() {
   $('a#show_title_help').click(function(event){
@@ -51,4 +51,5 @@ $(function() {
     event.preventDefault();
     $('div#choice_2_help').toggle();
   });
+});
 });
