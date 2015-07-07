@@ -42,10 +42,10 @@
         <%= f.label :choice_1 %>
         <select name="situation[choice_1]">
           <option value="" disabled selected>Select your next situation</option>
+          <option value="0">New Situation</option>
           <% @situations.each do |situation| %>
             <option value="<%= situation.id %>"<% if @situation.choice_1 == situation.id %> SELECTED<% end %>><%= situation.id %> - <%= situation.title %></option>
           <% end %>
-          <option value="0">New Situation</option>
         </select>
     </div>
 
