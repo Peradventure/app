@@ -17,12 +17,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
+    <div class="row">
+      <div class="small-2 columns"><%= f.label "Title" %></div>
+      <div id="title_help" class="hidden small-8 columns">The Title is the Header of your new situation. For example: "The Dragon's Nest"</div>
+      <div class="small-2 columns"><a id="show_title_help" class="right">More Info</a></div>
+    </div>
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :sit_rep %>
+    <div class="row">
+      <div class="small-2 columns"><%= f.label "Description" %></div>
+      <div id="sit_rep_help" class="hidden small-8 columns">This is where you explain the situation. For example: "You enter a dark cave with a sleeping dragon, sitting on top of a pile of gold"</div>
+      <div class="small-2 columns"><a id="show_sit_rep_help" class="right">More Info</a></div>
+    </div>
     <%= f.text_area :sit_rep %>
   </div>
 
@@ -34,34 +42,50 @@
   <div id="choices" style="<% if @situation.ending %>display:none;<% end %>">
 
     <div class="field">
-      <%= f.label :choice_1_label %>
+      <div class="row">
+        <div class="small-2 columns"><%= f.label :choice_1_label %></div>
+        <div id="choice_1_label_help" class="hidden small-8 columns">This is where you tell the user the first of two options they can take For example: "Poke the dragon!"</div>
+        <div class="small-2 columns"><a id="show_choice_1_label_help" class="right">More Info</a></div>
+      </div>
       <%= f.text_field :choice_1_label %>
     </div>
 
     <div class="field">
-        <%= f.label :choice_1 %>
-        <select name="situation[choice_1]">
-          <option value="" disabled selected>Select your next situation</option>
-          <option value="0">New Situation</option>
-          <% @situations.each do |situation| %>
-            <option value="<%= situation.id %>"<% if @situation.choice_1 == situation.id %> SELECTED<% end %>><%= situation.id %> - <%= situation.title %></option>
-          <% end %>
-        </select>
+      <div class="row">
+        <div class="small-2 columns"><%= f.label :choice_1 %></div>
+        <div id="choice_1_help" class="hidden small-8 columns">This is where you select where the first choice will go. If you want the user to be able to create there own situation select "New Situation", otherwise select an option from the list of other situations</div>
+        <div class="small-2 columns"><a id="show_choice_1_help" class="right">More Info</a></div>
+      </div>
+      <select name="situation[choice_1]">
+        <option value="" disabled selected>Select your next situation</option>
+        <option value="0">New Situation</option>
+        <% @situations.each do |situation| %>
+          <option value="<%= situation.id %>"<% if @situation.choice_1 == situation.id %> SELECTED<% end %>><%= situation.id %> - <%= situation.title %></option>
+        <% end %>
+      </select>
     </div>
 
     <div class="field">
-      <%= f.label :choice_2_label %>
+      <div class="row">
+        <div class="small-2 columns"><%= f.label :choice_2_label %></div>
+        <div id="choice_2_label_help" class="hidden small-8 columns">This is where you tell the user the second of two options they can take For example: "Run Away!"</div>
+        <div class="small-2 columns"><a id="show_choice_2_label_help" class="right">More Info</a></div>
+      </div>
       <%= f.text_field :choice_2_label %>
     </div>
 
     <div class="field">
-      <%= f.label :choice_2 %>
+      <div class="row">
+        <div class="small-2 columns"><%= f.label :choice_2 %></div>
+        <div id="choice_2_help" class="hidden small-8 columns">This is where you select where the second choice will go. If you want the user to be able to create there own situation select "New Situation", otherwise select an option from the list of other situations</div>
+        <div class="small-2 columns"><a id="show_choice_2_help" class="right">More Info</a></div>
+      </div>
       <select name="situation[choice_2]">
         <option value="0" disabled selected>Select your next situation</option>
+        <option value="0">New Situation</option>
         <% @situations.each do |situation| %>
           <option value="<%= situation.id %>"<% if @situation.choice_2 == situation.id %> SELECTED<% end %>><%= situation.id %> - <%= situation.title %></option>
         <% end %>
-        <option value="0">New Situation</option>
       </select>
     </div>
   </div>
