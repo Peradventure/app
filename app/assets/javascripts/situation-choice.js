@@ -12,44 +12,11 @@ $( document ).on('page:load ready', function(){
 
 
   $(function() {
-    $('a#show_title_help').click(function(event){
-      event.preventDefault();
-      $('div#title_help').toggle();
-    });
-  });
-
-  $(function() {
-    $('a#show_sit_rep_help').click(function(event){
-      event.preventDefault();
-      $('div#sit_rep_help').toggle();
-    });
-  });
-
-  $(function() {
-    $('a#show_choice_1_label_help').click(function(event){
-      event.preventDefault();
-      $('div#choice_1_label_help').toggle();
-    });
-  });
-
-  $(function() {
-    $('a#show_choice_1_help').click(function(event){
-      event.preventDefault();
-      $('div#choice_1_help').toggle();
-    });
-  });
-
-  $(function() {
-    $('a#show_choice_2_label_help').click(function(event){
-      event.preventDefault();
-      $('div#choice_2_label_help').toggle();
-    });
-  });
-
-  $(function() {
-    $('a#show_choice_2_help').click(function(event){
-      event.preventDefault();
-      $('div#choice_2_help').toggle();
+    $.each(['title','sit_rep','choice_1','choice_1_label','choice_2','choice_2_label'], function(index, name){
+      $('a#show_' + name + '_help').click(function(event){
+        event.preventDefault();
+        $('div#' + name +'_help').toggle();
+      });
     });
   });
 });
