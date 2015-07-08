@@ -8,8 +8,15 @@
       Start Over
     </a>
     </div>
-    <div data-alert class="alert-box alert radius">
-      The situation that you create here will be the option that takes the place of the button you clicked on!
+
+    <div data-alert class="alert-box info radius">
+      The situation that you create here will decide what takes the place of the button you clicked on! You decide! What happens after someone selects "
+      <% if params[:obutton] == '1'%>
+        <%= Situation.find(params[:oid]).choice_1_label%>
+      <% else %>
+        <%= Situation.find(params[:oid]).choice_2_label%>
+      <% end %>
+      "?
     </div>
   <% end %>
 
