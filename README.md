@@ -21,3 +21,5 @@ vagrant $ bundle
 vagrant $ rake db:migrate
 vagrant $ rake db:seed
 ```
+
+If you need to reset the database to the original state use `rake db:clear && rake db:migrate && rake db:seed`
