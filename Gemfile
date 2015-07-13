@@ -46,4 +46,14 @@ group :development, :test do
 
   # RSPEC:
   gem 'rspec-rails', '~> 3.0'
+
+  # GUARD:
+  gem 'guard'
+  gem 'rb-inotify', :require => false
+  gem 'rb-fsevent', :require => false
+  gem 'rb-fchange', :require => false
+  gem 'growl', :require => false
+  gem 'libnotify', :require => false
+  gem 'guard-rspec', require: false
+  gem 'listen'
 end

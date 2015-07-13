@@ -23,3 +23,9 @@ vagrant $ rake db:seed
 ```
 
 If you need to reset the database to the original state use `rake db:clear && rake db:migrate && rake db:seed`
+
+Run the following commands to use `guard` and `rspec`:
+
+```
+$ bundle exec guard
+```
