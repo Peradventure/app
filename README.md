@@ -7,12 +7,11 @@ Peradventure is a "Choose Your Own Adventure" game that allows players to explor
 
 Peradventure is an open source Rails project which encourages contribution.
 
+The commands below will get your development environment set up (provided you have [Vagrant](https://www.vagrantup.com/downloads.html) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed on your host machine already).
 
-
-The following commands will get your development environment set up (provided you have Vagrant and VirtualBox installed on your host machine already).
-
+Everything command labeled `host` should be run on your local development workstation. Everything command labeled `vagrant` should be run on the VM over ssh.
 ```
-host $ git clone https://github.com/rails/rails-dev-box.git
+host $ git clone https://github.com/Peradventure/rails-dev-box
 host $ cd rails-dev-box
 host $ git clone git@github.com:Peradventure/app.git rails
 host $ vagrant up
