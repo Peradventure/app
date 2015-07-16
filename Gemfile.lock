@@ -230,6 +230,7 @@ DEPENDENCIES
   jquery-rails
   libnotify
   listen
+  pry
   rails (= 4.2.2)
   rb-fchange
   rb-fsevent

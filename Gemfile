@@ -46,7 +46,8 @@ group :development, :test do
 
   # RSPEC:
   gem 'rspec-rails', '~> 3.0'
-
+  gem 'pry'
+  
   # GUARD:
   gem 'guard'
   gem 'rb-inotify', :require => false

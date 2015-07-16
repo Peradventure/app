@@ -81,25 +81,24 @@ class SituationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_situation
-      @situation = Situation.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_situation
+    @situation = Situation.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def situation_params
-      params.require(:situation).permit(:title, :sit_rep, :choice_1, :choice_1_label, :choice_2, :choice_2_label, :ending)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def situation_params
+    params.require(:situation).permit(:title, :sit_rep, :choice_1, :choice_1_label, :choice_2, :choice_2_label, :ending)
+  end
 
-    #
-    def set_parent_choice(parent_id, choice_number, choice_id)
-      @parent = Situation.find(parent_id)
-      if choice_number == '1'
-        @parent.choice_1 = choice_id
-      elsif choice_number == '2'
-        @parent.choice_2 = choice_id
-      end
-      @parent.save
+  #
+  def set_parent_choice(parent_id, choice_number, choice_id)
+    @parent = Situation.find(parent_id)
+    if choice_number == '1'
+      @parent.choice_1 = choice_id
+    elsif choice_number == '2'
+      @parent.choice_2 = choice_id
     end
-
+    @parent.save
+  end
 end
