@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   before_action :set_situation, only: [:show]
 
-  require 'Situation'
+  require 'situation'
 
   # GET /index
   def index
