@@ -17,7 +17,7 @@
     </thead>
 
     <tbody>
-      <% @situations.each do |situation| %>
+      <% @situations.sort_by { |id| +id[:id] }.each do |situation| %>
         <tr>
           <td><%= situation.id %></td>
           <td><%= situation.title %></td>
