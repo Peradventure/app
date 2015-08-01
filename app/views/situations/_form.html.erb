@@ -83,7 +83,7 @@
       <select name="situation[choice_2]">
         <option value="0" disabled selected>Destination</option>
         <option value="0">New Situation</option>
-        <% @situations.each do |situation| %>
+        <% @situations.sort_by { |id| +id[:id] }.each do |situation| %>
           <option value="<%= situation.id %>"<% if @situation.choice_2 == situation.id %> SELECTED<% end %>><%= situation.id %> - <%= situation.title %></option>
         <% end %>
       </select>
